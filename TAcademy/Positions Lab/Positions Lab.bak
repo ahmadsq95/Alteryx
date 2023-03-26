@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="42" y="150" width="492" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>1. find the average required years of experience
+2. what is the average years of experience required to be a director?
+2. what is the month having the lowest average years of experience?</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">positions.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>positions.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="id" source="RecordID: Starting Value=1" type="Int16" />
+            <Field name="position" size="32" source="File: aka:linkedin_jobs|||select linkedin_jobs.processed_data.`Revised Position`,&#xA;	linkedin_jobs.processed_data.min_years,&#xA;	linkedin_jobs.processed_data.Level,&#xA;	linkedin_jobs.processed_data.linkedin_id,&#xA;	linkedin_jobs.processed_data.Date &#xA;from linkedin_jobs.processed_data" type="V_WString" />
+            <Field name="years_of_experience" source="File: aka:linkedin_jobs|||select linkedin_jobs.processed_data.`Revised Position`,&#xA;	linkedin_jobs.processed_data.min_years,&#xA;	linkedin_jobs.processed_data.Level,&#xA;	linkedin_jobs.processed_data.linkedin_id,&#xA;	linkedin_jobs.processed_data.Date &#xA;from linkedin_jobs.processed_data" type="Int32" />
+            <Field name="job_level" size="16" source="File: aka:linkedin_jobs|||select linkedin_jobs.processed_data.`Revised Position`,&#xA;	linkedin_jobs.processed_data.min_years,&#xA;	linkedin_jobs.processed_data.Level,&#xA;	linkedin_jobs.processed_data.linkedin_id,&#xA;	linkedin_jobs.processed_data.Date &#xA;from linkedin_jobs.processed_data" type="WString" />
+            <Field name="date" source="File: aka:linkedin_jobs|||select linkedin_jobs.processed_data.`Revised Position`,&#xA;	linkedin_jobs.processed_data.min_years,&#xA;	linkedin_jobs.processed_data.Level,&#xA;	linkedin_jobs.processed_data.linkedin_id,&#xA;	linkedin_jobs.processed_data.Date &#xA;from linkedin_jobs.processed_data" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="150" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>
+          </TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Positions Lab</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="7aa9a7ce-dd98-4edf-a3c9-4dd18ca99372" />
+      <Telemetry>
+        <PreviousWorkflowId value="2711bdfe-66ad-438b-9e4b-7e1a52dd5615" />
+        <OriginWorkflowId value="2711bdfe-66ad-438b-9e4b-7e1a52dd5615" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

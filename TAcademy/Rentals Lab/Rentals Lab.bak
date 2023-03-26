@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Rentals.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Rentals.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="date" size="254" source="File: C:\Users\mraha\Desktop\Personal\Into to Alteryx Designer\Day 3\Gethern August 2022.csv" type="V_WString" />
+            <Field name="unit_id" size="254" source="File: C:\Users\mraha\Desktop\Personal\Into to Alteryx Designer\Day 3\Gethern August 2022.csv" type="V_WString" />
+            <Field name="chalet_id" size="254" source="File: C:\Users\mraha\Desktop\Personal\Into to Alteryx Designer\Day 3\Gethern August 2022.csv" type="V_WString" />
+            <Field name="chalet_title" size="254" source="File: C:\Users\mraha\Desktop\Personal\Into to Alteryx Designer\Day 3\Gethern August 2022.csv" type="V_WString" />
+            <Field name="code" size="254" source="File: C:\Users\mraha\Desktop\Personal\Into to Alteryx Designer\Day 3\Gethern August 2022.csv" type="V_WString" />
+            <Field name="final_price" size="254" source="File: C:\Users\mraha\Desktop\Personal\Into to Alteryx Designer\Day 3\Gethern August 2022.csv" type="V_WString" />
+            <Field name="booking_count" size="254" source="File: C:\Users\mraha\Desktop\Personal\Into to Alteryx Designer\Day 3\Gethern August 2022.csv" type="V_WString" />
+            <Field name="rating" size="254" source="File: C:\Users\mraha\Desktop\Personal\Into to Alteryx Designer\Day 3\Gethern August 2022.csv" type="V_WString" />
+            <Field name="city" size="1073741823" source="Formula: &quot;الرياض&quot;" type="V_WString" />
+            <Field name="neighborhood" size="1073741823" source="Formula: Replace([address], &quot;'}&quot;, &quot;&quot;)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="66" y="138" width="228" height="144" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[1 check data types
+2 cleanse chalet_title
+3 filter only 2022-08-31
+4 label chalet categories based on rating
+    -- 7 or more >>  A"
+   -- less than 7 >>"B"
+5 create url
+6 Top booked count per neighborhood
+7 Top booked count
+----
+8 Average Price per rating category
+9 Average Bookings per neighborhood
+]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections />
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Rentals Lab</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="9a862c73-4a2d-4130-ae5a-bd49ac925c2d" />
+      <Telemetry>
+        <PreviousWorkflowId value="0ccdd952-0170-45b6-a5e1-1f8388fc121d" />
+        <OriginWorkflowId value="0ccdd952-0170-45b6-a5e1-1f8388fc121d" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

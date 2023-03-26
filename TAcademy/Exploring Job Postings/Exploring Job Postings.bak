@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Job Postings Data.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Job Postings Data.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="linkedin_id" size="11" source="File: aka:linkedin_jobs|||select linkedin_jobs.position_details.position_id,&#xA;	linkedin_jobs.position_details.Position,&#xA;	linkedin_jobs.position_details.Company,&#xA;	linkedin_jobs.position_details.Location,&#xA;	linkedin_jobs.position_details.Date,&#xA;	linkedin_jobs.position_details.Level,&#xA;	linkedin_jobs.position_details.Job_Function,&#xA;	linkedin_jobs.position_details.Industry,&#xA;	linkedin_jobs.position_details.Link,&#xA;	linkedin_jobs.position_details.linkedin_id,&#xA;	linkedin_jobs.position_details.company_linkedin_url,&#xA;	linkedin_jobs.position_details.experience &#xA;from linkedin_jobs.position_details" type="WString" />
+            <Field name="Position" size="65535" source="Formula: if [Company]='Allied Healthcare' then [Position] + ' ' else [Position] endif" type="V_WString" />
+            <Field name="Company" size="65535" source="File: aka:linkedin_jobs|||select linkedin_jobs.position_details.position_id,&#xA;	linkedin_jobs.position_details.Position,&#xA;	linkedin_jobs.position_details.Company,&#xA;	linkedin_jobs.position_details.Location,&#xA;	linkedin_jobs.position_details.Date,&#xA;	linkedin_jobs.position_details.Level,&#xA;	linkedin_jobs.position_details.Job_Function,&#xA;	linkedin_jobs.position_details.Industry,&#xA;	linkedin_jobs.position_details.Link,&#xA;	linkedin_jobs.position_details.linkedin_id,&#xA;	linkedin_jobs.position_details.company_linkedin_url,&#xA;	linkedin_jobs.position_details.experience &#xA;from linkedin_jobs.position_details" type="V_WString" />
+            <Field name="Location" size="65535" source="File: aka:linkedin_jobs|||select linkedin_jobs.position_details.position_id,&#xA;	linkedin_jobs.position_details.Position,&#xA;	linkedin_jobs.position_details.Company,&#xA;	linkedin_jobs.position_details.Location,&#xA;	linkedin_jobs.position_details.Date,&#xA;	linkedin_jobs.position_details.Level,&#xA;	linkedin_jobs.position_details.Job_Function,&#xA;	linkedin_jobs.position_details.Industry,&#xA;	linkedin_jobs.position_details.Link,&#xA;	linkedin_jobs.position_details.linkedin_id,&#xA;	linkedin_jobs.position_details.company_linkedin_url,&#xA;	linkedin_jobs.position_details.experience &#xA;from linkedin_jobs.position_details" type="V_WString" />
+            <Field name="Date1" source="File: aka:linkedin_jobs|||select linkedin_jobs.position_details.position_id,&#xA;	linkedin_jobs.position_details.Position,&#xA;	linkedin_jobs.position_details.Company,&#xA;	linkedin_jobs.position_details.Location,&#xA;	linkedin_jobs.position_details.Date,&#xA;	linkedin_jobs.position_details.Level,&#xA;	linkedin_jobs.position_details.Job_Function,&#xA;	linkedin_jobs.position_details.Industry,&#xA;	linkedin_jobs.position_details.Link,&#xA;	linkedin_jobs.position_details.linkedin_id,&#xA;	linkedin_jobs.position_details.company_linkedin_url,&#xA;	linkedin_jobs.position_details.experience &#xA;from linkedin_jobs.position_details" type="DateTime" />
+            <Field name="Level" size="65535" source="File: aka:linkedin_jobs|||select linkedin_jobs.position_details.position_id,&#xA;	linkedin_jobs.position_details.Position,&#xA;	linkedin_jobs.position_details.Company,&#xA;	linkedin_jobs.position_details.Location,&#xA;	linkedin_jobs.position_details.Date,&#xA;	linkedin_jobs.position_details.Level,&#xA;	linkedin_jobs.position_details.Job_Function,&#xA;	linkedin_jobs.position_details.Industry,&#xA;	linkedin_jobs.position_details.Link,&#xA;	linkedin_jobs.position_details.linkedin_id,&#xA;	linkedin_jobs.position_details.company_linkedin_url,&#xA;	linkedin_jobs.position_details.experience &#xA;from linkedin_jobs.position_details" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections />
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Exploring Job Postings</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="225935f7-e10c-45b3-b53b-817e6bb612d8" />
+      <Telemetry>
+        <PreviousWorkflowId value="071ef596-247a-483a-9f54-bd728eab4a27" />
+        <OriginWorkflowId value="71d67bad-f98c-49a8-9c02-07b54740b7a0" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
